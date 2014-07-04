@@ -1,0 +1,16 @@
+# See https://atom.io/docs/latest/creating-a-package#menus for more details
+'context-menu':
+  '.overlayer':
+      'Enable eval-selection': 'eval-selection:toggle'
+
+'menu': [
+  {
+    'label': 'Packages'
+    'submenu': [
+      'label': 'eval-selection'
+      'submenu': [
+        { 'label': 'Toggle', 'command': 'eval-selection:toggle' }
+      ]
+    ]
+  }
+]
