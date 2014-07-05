@@ -2,11 +2,12 @@
 coffee = require('coffee-script')
 vm = require('vm')
 esprima = require('esprima')
-
+remote = require('remote') # no clue what 'remote' really is, but lets use it!
 
 module.exports =
 
   activate: ->
+    console.log(esprima)
     atom.workspaceView.command 'eval-selection:eval', => @eval_current_selection()
 
   deactivate: ->
@@ -14,6 +15,7 @@ module.exports =
   serialize: ->
 
   eval_current_selection: ->
+    remote.getCurrentWindow().openDevTools()
     editor = atom.workspace.getActiveEditor()
 
     code = editor.getSelectedText() or editor.getText()
@@ -27,5 +29,5 @@ module.exports =
     try
       syntax = esprima.parse(code, tolerant: true)
       return syntax.errors.length == 0
-    catch
+    catch e
       return false
