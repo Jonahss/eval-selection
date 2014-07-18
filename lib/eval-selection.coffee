@@ -7,7 +7,6 @@ remote = require('remote') # no clue what 'remote' really is, but lets use it!
 module.exports =
 
   activate: ->
-    console.log(esprima)
     atom.workspaceView.command 'eval-selection:eval', => @eval_current_selection()
 
   deactivate: ->
@@ -18,7 +17,7 @@ module.exports =
     remote.getCurrentWindow().openDevTools()
     editor = atom.workspace.getActiveEditor()
 
-    code = editor.getSelectedText() or editor.getText()
+    code = editor.getSelectedText() or editor.lineForScreenRow(editor.getCursorScreenRow()).text
 
     if @valid_js(code)
       console.log(vm.runInThisContext(code))

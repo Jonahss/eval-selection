@@ -5,6 +5,8 @@
 3. ???
 4. Your js or coffeescript code is evaluated and result logged to developer console
 
+Hitting f5 with no text selected, evals the current line.
+
 
 It's eerily like the Acme editor. Write code snippets that do stuff in your editor O.o
 
