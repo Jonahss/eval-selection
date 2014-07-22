@@ -1,0 +1,22 @@
+editor = atom.workspace.getActiveEditor()
+buffer = editor.buffer
+coffee = require 'coffee-script'
+
+range = buffer.getRange()
+range.start.row += 8
+buffer.setText(coffee.compile(editor.getTextInRange(range)))
+
+append_line = () ->
+  str = ""
+  for i in [0..100]
+    if Math.floor(Math.random()*2) then str+='/' else str+='\\'
+  buffer.append(str+'\n')
+  editor.scrollToScreenPosition(buffer.getEndPosition())
+
+
+append_line()
+
+atom.config.set('editor.lineHeight', '.8')
+
+interval = setInterval(append_line, 500)
+console.log('interval: ', interval)

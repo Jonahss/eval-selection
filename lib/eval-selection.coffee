@@ -29,4 +29,5 @@ module.exports =
       syntax = esprima.parse(code, tolerant: true)
       return syntax.errors.length == 0
     catch e
+      console.log(e)
       return false
