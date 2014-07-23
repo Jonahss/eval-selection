@@ -1,7 +1,7 @@
 {
   "name": "eval-selection",
   "main": "./lib/eval-selection",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "evaluate selected js or coffeescript code, logs to developer console",
   "repository": "https://github.com/jonahss/eval-selection",
   "license": "MIT",
