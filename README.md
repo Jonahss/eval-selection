@@ -18,4 +18,4 @@ Most of this code is taken from [coffee-eval](https://atom.io/packages/coffee-ev
 ### In the demo above ###
 Lines 1-7, written in coffeescript, are evaluated. They take the rest of the text in the editor and compile it to js.
 The js code is then selected and run.
-The result is an implementation of the classic 10PRINT program.
+The result is an implementation of the classic [10PRINT](http://www.amazon.com/10-PRINT-CHR-205-5-RND/dp/0262018462) program.

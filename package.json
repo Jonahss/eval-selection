@@ -1,5 +1,5 @@
 {
-  "name": "eval-selection",
+  "name": "eval-selecshun",
   "main": "./lib/eval-selection",
   "version": "1.3.0",
   "description": "evaluate selected js or coffeescript code, logs to developer console",
